@@ -1,0 +1,60 @@
+#left{
+    width: 30vw;
+    margin-left: 10px;
+    position: sticky;
+    height: 100%;
+    top: 10px;
+}
+
+#left h3{
+    font-weight: 450;
+}
+
+.PrdouctCat{
+    display: flex;
+    flex-direction: column;
+}
+
+.sortby{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.inputBox{
+    display: flex;
+    align-items: center;
+}
+
+.inputBox input{
+    width: 18px;
+    height: 20px;
+}
+
+
+.banner{
+    width: 68vw;
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.banner img{
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.catContainer{
+    display: flex;
+
+
+}
+
+.right{
+
+}

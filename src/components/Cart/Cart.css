@@ -1,0 +1,78 @@
+.mainCart{
+    position: absolute;
+    top: 70px;
+    right: 0px;
+    width: 35vw;
+    z-index: 999;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    max-height: 85vh;
+    overflow: scroll;
+    -webkit-overflow-scrolling: none;
+}
+
+.mainCart::-webkit-scrollbar{
+    display: none;
+}
+
+.mainCart h2{
+    margin-left: 10px;
+}
+
+
+.cartItem img{
+    width: 70px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    margin: 10px;
+}
+
+
+.cartItem {
+    margin: 10px 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+
+.spanner{
+    display: flex;
+    width: 100%;
+    height: 30px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.spanner i{
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.spanner span{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.subtotal{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 20px;
+}
+
+.checkout{
+    width: fit-content;
+    height: 30px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    margin: 10px;
+    margin-left: 20px;
+}

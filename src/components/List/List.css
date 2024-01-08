@@ -1,0 +1,10 @@
+#listContainer{
+    padding-right: 10px;
+    margin-top: 50px;
+    width: 68vw;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+

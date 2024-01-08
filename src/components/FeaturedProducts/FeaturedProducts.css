@@ -1,0 +1,11 @@
+.productList{
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    justify-content: space-evenly;
+    margin:50px 0;
+}
+
+.productTitle{
+    margin-left: 20px;
+}
