@@ -32,8 +32,8 @@ export const Slider = () => {
         </div>
 
         <div className="buttons">
-            <span onClick={prevSlide}><i class="fa-solid fa-arrow-left"></i></span>
-            <span onClick={nextSlide}><i class="fa-solid fa-arrow-right"></i></span>
+            <span onClick={prevSlide}><i className="fa-solid fa-arrow-left"></i></span>
+            <span onClick={nextSlide}><i className="fa-solid fa-arrow-right"></i></span>
         </div>
 
 

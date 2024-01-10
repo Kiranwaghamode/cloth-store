@@ -27,11 +27,11 @@ export const Navbar = () => {
             <Link to='/' className='items'>About</Link>
             <Link to='/' className='items'>Contact</Link>
             <Link to='/' className='items'>Stores</Link>
-            <Link to='/'><i class="fa-solid fa-magnifying-glass" ></i></Link>
-            <Link to='/'><i class="fa-regular fa-heart" ></i></Link>
-            <Link to='/'><i class="fa-solid fa-user" ></i></Link>
+            <Link to='/'><i className="fa-solid fa-magnifying-glass" ></i></Link>
+            <Link to='/'><i className="fa-regular fa-heart" ></i></Link>
+            <Link to='/'><i className="fa-solid fa-user" ></i></Link>
             <div className="cart">
-            <Link onClick={()=>setopen(!open)} ><i class="fa-solid fa-cart-shopping" ></i></Link>
+            <Link onClick={()=>setopen(!open)} ><i className="fa-solid fa-cart-shopping" ></i></Link>
             
             <span>0</span>
 
