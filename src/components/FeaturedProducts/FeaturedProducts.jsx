@@ -3,7 +3,7 @@ import { Card } from '../card/Card'
 import './FeaturedProducts.css'
 import axios from 'axios'
 
-export const FeaturedProducts = ({title}) => {
+export const FeaturedProducts = ({type}) => {
 
 
       
@@ -11,7 +11,7 @@ export const FeaturedProducts = ({title}) => {
 
       const [Data, setData] = useState([])
 
-
+ 
       useEffect(() => {
         const fetchedData = async ()=>{
           try {
@@ -30,7 +30,7 @@ export const FeaturedProducts = ({title}) => {
 
   return (
     <>
-    <h1 className='productTitle'>{title}</h1>
+    <h1 className='productTitle'>{type}</h1>
     <div className="productList">
     {Data.map((item, index)=>(
             <Card item={item} key={index}/>

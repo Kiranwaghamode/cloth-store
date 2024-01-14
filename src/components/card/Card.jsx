@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export const Card = ({item}) => {
   return (
-    <>
+    <> 
         
         <div className="cardContainer">
             <Link to={`/product/${item.id}`} className='cardLink' >
@@ -14,6 +14,6 @@ export const Card = ({item}) => {
             </Link>
         </div>
         
-    </>
+    </> 
   )
 }

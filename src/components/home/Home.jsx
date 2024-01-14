@@ -10,9 +10,9 @@ export const Home = () => {
     <>
     <div className="main">
         <Slider/>
-        <FeaturedProducts title='Featured Products'/>
+        <FeaturedProducts type='Featured Products'/>
         <Products/>
-        <FeaturedProducts title='Trending Products' />
+        <FeaturedProducts type='Trending Products' />
         <Footer/>
         </div>
     </>
