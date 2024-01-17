@@ -6,14 +6,16 @@
 
 #Productleft{
     width: 50vw;
-    /* display: flex;
-    align-items: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 10px;
     padding-top: 30px;
 }
 
 #Productleft img{
-    width: 100%;
+    height: 400px;
+
     object-fit: cover;
 
 }

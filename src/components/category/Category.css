@@ -58,3 +58,18 @@
 .right{
 
 }
+
+#maxPrice{
+    display: block;
+    margin: 10px;
+    margin-left: 0;
+    padding: 6px;
+    border-radius: 5px;
+    border: 2px solid black;
+    /* outline: none; */
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+
+}

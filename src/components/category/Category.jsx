@@ -9,9 +9,10 @@ export const Category = () => {
 
   const [maxPrice, setmaxPrice] = useState(1000);
   const catId = parseInt(useParams().id)
-  const [sort, setsort] = useState(null)
+  const [sort, setsort] = useState('asc')
   const [data, setData] = useState([])
   const [selectedSubCat, setSelectedSubCat] = useState([]);
+  const [rangePrice, setrangePrice] = useState(1000)
 
 
 
@@ -48,6 +49,7 @@ export const Category = () => {
 
 
 
+
   return (
     <>
     <div className="catContainer">
@@ -75,16 +77,17 @@ export const Category = () => {
             <h3>Filter by Price</h3>
             <span>0</span>
             <input type="range" max={1000} min={0} onChange={(e)=>{
-              setmaxPrice(e.target.value);
+              setrangePrice(e.target.value);
             }} />
-            <span>{maxPrice}</span>
+            <span>{rangePrice}</span>
+            <button onClick={()=>{setmaxPrice(rangePrice)}} id='maxPrice'>Set Price</button>
           </div>
 
           <div className="sortby">
             <h3>Sort by Price</h3>
             <div className="inputBox">
-            <input type="radio" name='sort' value='lowest' onChange={(e)=>{
-              setsort('esc');
+            <input type="radio" name='sort'  value='lowest' onChange={(e)=>{
+              setsort('asc');
             }}/>
             <label htmlFor="input">Price (Lowest first)</label>
             </div>

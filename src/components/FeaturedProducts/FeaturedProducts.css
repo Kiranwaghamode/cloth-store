@@ -4,6 +4,9 @@
     width: 100vw;
     justify-content: space-evenly;
     margin:50px 0;
+
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .productTitle{

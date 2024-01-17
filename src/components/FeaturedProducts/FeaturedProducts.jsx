@@ -37,7 +37,7 @@ export const FeaturedProducts = ({type}) => {
         ))}
     </div>
     
-    
+     
     
     </>
   )
