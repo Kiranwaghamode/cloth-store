@@ -7,20 +7,20 @@ export const Footer = () => {
     <div className="Footer">
       <div className="list1">
         <h3>Category</h3>
-            <Link to='/' className='listItems'>Men</Link>
-            <Link to='/' className='listItems'>Women</Link>
-            <Link to='/' className='listItems'>Children</Link>
-            <Link to='/' className='listItems'>Accessories</Link>
+            <Link to='/category/1' className='listItems'>Men</Link>
+            <Link to='/category/2' className='listItems'>Women</Link>
+            <Link to='/category/3' className='listItems'>Children</Link>
+            <Link to='/category/4' className='listItems'>Accessories</Link>
       </div>
 
       <div className="list2">
         <h3>About</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod est repellat eum facere, officiis exercitationem, voluptatibus itaque suscipit consequuntur sunt culpa ex quibusdam</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, at?</p>
       </div>
 
       <div className="list3">
         <h3>Contact</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, nostrum saepe! Dolores nesciunt necessitatibus numquam, voluptates accusamus illum dolor et harum ipsa dignissimos</p> 
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus, autem?</p> 
       </div>
 
 

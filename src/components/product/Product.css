@@ -60,3 +60,14 @@
 #Productright h2 span{
     color: rgb(0, 0, 255);
 }
+
+
+@media only screen and (max-width: 450px) {
+    #Productleft img{
+        height: 200px;
+    }
+
+    #Productright{
+        width: 40vw;
+    }
+}

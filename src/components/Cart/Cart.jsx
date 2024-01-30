@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Cart.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { removeItem, resetCart } from '../../redux/cartReducer'
@@ -24,12 +24,11 @@ export const Cart = () => {
             <h3>{item?.title}</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.  </p>
             <div className="spanner">
-            <span>{item.quantity} x {item.price}: {item.totalPrice}</span>
+            <span>{item.quantity}x{item.price}:{item.totalPrice}</span>
             <i class="fa-solid fa-trash-can" onClick={()=>{
               dispatch(
                 removeItem(item.id)
               )
-             
             }}></i>
             </div>
             </div>

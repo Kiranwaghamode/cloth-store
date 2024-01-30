@@ -83,19 +83,19 @@ export const Category = () => {
             <button onClick={()=>{setmaxPrice(rangePrice)}} id='maxPrice'>Set Price</button>
           </div>
 
-          <div className="sortby">
             <h3>Sort by Price</h3>
+          <div className="sortby">
             <div className="inputBox">
-            <input type="radio" name='sort'  value='lowest' onChange={(e)=>{
+            <input type="radio" name='sort' className='radioInput'  value='lowest' onChange={(e)=>{
               setsort('asc');
             }}/>
-            <label htmlFor="input">Price (Lowest first)</label>
+            <label htmlFor="input">Price(Lowest first)</label>
             </div>
             <div className="inputBox">
-            <input type="radio" name='sort' value='highest' onChange={(e)=>{
+            <input type="radio" name='sort' value='highest' className='radioInput' onChange={(e)=>{
               setsort('desc');
             }}/>
-            <label htmlFor="input">Price (Highest first)</label>
+            <label htmlFor="input">Price(Highest first)</label>
             </div>
           </div>
         </div>

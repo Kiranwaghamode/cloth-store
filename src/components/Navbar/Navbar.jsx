@@ -5,37 +5,47 @@ import { Cart } from '../Cart/Cart';
 import { useSelector } from 'react-redux';
 
 export const Navbar = () => {
-
-    // const [cartCount, setcartCount] = useState(0)
     const [open, setopen] = useState(false);
 
     const products = useSelector(state => state.cart.products);
 
-    // setcartCount(products.length)
+
+    const [showMenu, setshowMenu] = useState(false)
+
+
+    const toggleMenu = ()=>{
+        setshowMenu(!showMenu);
+        console.log(showMenu)
+    }
 
   return (
    <>
    
    <div className="navbar">
-        <div className="left">
-            <Link to='/' className='items'>Men</Link>
-            <Link to='/' className='items'>Women</Link>
-            <Link to='/' className='items'>Children</Link>
-            <Link to='/' className='items'>Accessories</Link>
+        <div className="menu-icon" onClick={toggleMenu}><i class="fa-solid fa-bars"></i></div>
+        <div className={`left ${showMenu ? 'show' : ''}`}>
+            <Link to='/category/1' className='items'>Men</Link>
+            <Link to='/category/2' className='items'>Women</Link>
+            <Link to='/category/3' className='items'>Children</Link>
+            <Link to='/category/4' className='items'>Accessories</Link>
         </div>
         <div className="center">
-            <h2>LAMA STORE</h2>
+        <Link to='/' className='mainTitle'>
+            <h2>
+            <span id="voilet">7</span>
+            <span id="indigo">C</span>
+            <span id="blue">O</span>
+            <span id="green">L</span>
+            <span id="yellow">O</span>
+            <span id="orange">R</span>
+            <span id="red">S</span>
+            </h2></Link>
         </div>
         <div className="right">
-            <Link to='/' className='items'>Homepage</Link>
-            <Link to='/' className='items'>About</Link>
-            <Link to='/' className='items'>Contact</Link>
-            <Link to='/' className='items'>Stores</Link>
-            <Link to='/'><i className="fa-solid fa-magnifying-glass" ></i></Link>
-            <Link to='/'><i className="fa-regular fa-heart" ></i></Link>
-            <Link to='/'><i className="fa-solid fa-user" ></i></Link>
+           
+           
             <div className="cart">
-            <Link onClick={()=>setopen(!open)} ><i className="fa-solid fa-cart-shopping" ></i></Link>
+            <Link onClick={()=>setopen(!open)} className='cartLink' ><h3>Cart</h3><i className="fa-solid fa-cart-shopping" ></i></Link>
             
             <span>{products.length}</span>
 

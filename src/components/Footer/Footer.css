@@ -36,3 +36,12 @@
     color: gray;
 }
 
+@media only screen and (max-width: 450px) {
+    .list1{
+        gap: 20px;
+        
+    }
+    .listItems{
+        margin-bottom: 15px;
+    }
+}

@@ -18,6 +18,7 @@
 .sortby{
     display: flex;
     flex-direction: column;
+    gap: 30px;
 }
 
 
@@ -31,6 +32,9 @@
     height: 20px;
 }
 
+.filter input{
+    width: 100px;
+}
 
 .banner{
     width: 68vw;
@@ -72,4 +76,42 @@
     cursor: pointer;
     font-size: 15px;
 
+}
+
+
+@media only screen and (max-width: 450px) {
+    .filter h3{
+        font-size: 19px;
+    }
+
+
+    .filter input{
+        width: 100px;
+
+    }
+
+    .banner{
+        height: 150px;
+        
+    }
+
+    .radioInput{
+        height: 50px;
+    }
+
+    .sortby div{
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .sortby div input{
+        margin: 0;
+        padding: 0;
+        width: 25px;
+        
+    }
+   
+    .inputBox label{
+        font-size: 13px;
+    }
 }

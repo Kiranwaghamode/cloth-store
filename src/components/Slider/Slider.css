@@ -35,3 +35,12 @@
     font-size: 40px;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 450px) {
+
+    .buttons{
+        top: 35vh;
+        right: 31vw;
+    }
+
+}
