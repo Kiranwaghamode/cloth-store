@@ -18,10 +18,7 @@ export const Products = () => {
       <img src="https://images.pexels.com/photos/5637816/pexels-photo-5637816.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
        <Link className='menLink' to='/category/3'> CHILDERN </Link> 
     </div>
-    <div className="Products">
-      <img src="https://images.pexels.com/photos/157888/fashion-glasses-go-pro-female-157888.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
-       <Link className='menLink' to='/category/4'> ACCESSORIES </Link> 
-    </div>
+    
     
     
     

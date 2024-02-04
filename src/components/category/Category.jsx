@@ -54,25 +54,6 @@ export const Category = () => {
     <>
     <div className="catContainer">
         <div id="left">
-          <div className="PrdouctCat">
-          <h3>Product Categories</h3>
-
-          {
-            data?.map((item)=>(
-              <div className="inputBox" key={item.id}>
-                <input 
-                  type="checkbox" 
-                  id={item.id} 
-                  value={item.id}
-                  onChange={handleChange}
-                  />
-                <label htmlFor="input">{item.attributes.title}</label>
-              </div>
-            ))
-          }
-          
-          </div>
-
           <div className="filter">
             <h3>Filter by Price</h3>
             <span>0</span>

@@ -4,41 +4,59 @@ import './Product.css'
 import useFetch from '../../hooks/useFetch'
 import { useDispatch, useSelector } from 'react-redux'
 import { addToCart } from '../../redux/cartReducer'
+import { productData } from '../../data/productData'
+import { WomenData } from '../../data/womenData'
+import { kidsData } from '../../data/kidsData'
 
 export const Product = () => {
 
-  const id = useParams().id;
+  const {productId, categoryId} = useParams();
+
+  const catId = parseInt(categoryId);
+  const id = parseInt(productId);
+  
+  let mainData = [];
+
+  if(catId === 1){
+    mainData = productData.find(item => item.id === id);
+  }else if(catId === 2){
+    mainData = WomenData.find(item => item.id === id);
+  }else if(catId === 3){
+    mainData = kidsData.find(item => item.id === id);
+  }
+
+
   const [quantity, setQuantity] = useState(1);
 
   const products = useSelector(state => state.cart.products);
-  const {data} = useFetch(`/products/${id}?populate=*`)
-  const isAdded = products.find((item)=> item.id === data.id);
+  const {data} = useFetch(`/products/${productId}?populate=*`)
+  const isAdded = products.find((item)=> item.id === mainData.id);
   const dispatch = useDispatch()
 
 
   return (
     <div className='productMainDiv'>
       <div id="Productleft">
-        <img src={`http://localhost:1337${data?.attributes?.image?.data?.attributes?.url}`} alt="" />
+        <img src={mainData?.imageUrl} alt="" />
       </div>
       <div id="Productright">
-        <h1>{data?.attributes?.title}</h1>
-        <h2>Price: <span> &#8377;{data?.attributes?.price}</span></h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptatum delectus nobis ratione magni totam. Cupiditate nesciunt praesentium, in sint aperiam alias eveniet provident eius recusandae sequi? Ipsa, facere maxime!</p>
+        <h1>{mainData?.name}</h1>
+        <h2>Price: <span> &#8377;{mainData?.price}</span></h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptatum delectus nobis ratione magni totam.</p>
 
         <button onClick={()=> setQuantity((prev) => (prev === 1 ? 1 : prev-1))}>-</button>
         {quantity}
         <button onClick={()=>setQuantity((prev) => (prev+1))}>+</button>
 
-
+ 
         <div className="addToCart" onClick={()=>{
           dispatch(
             addToCart({
-            id: data?.id,
-            title: data?.attributes?.title,
-            img: data?.attributes?.image?.data?.attributes?.url,
-            price: data?.attributes?.price,
-            totalPrice: data?.attributes?.price * quantity,
+            id: mainData?.id,
+            title: mainData?.name,
+            img: mainData?.imageUrl,
+            price: mainData?.price,
+            totalPrice: mainData?.price * quantity,
             quantity
           }))
         }}>

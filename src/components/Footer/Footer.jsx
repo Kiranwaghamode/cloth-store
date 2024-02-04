@@ -10,7 +10,6 @@ export const Footer = () => {
             <Link to='/category/1' className='listItems'>Men</Link>
             <Link to='/category/2' className='listItems'>Women</Link>
             <Link to='/category/3' className='listItems'>Children</Link>
-            <Link to='/category/4' className='listItems'>Accessories</Link>
       </div>
 
       <div className="list2">

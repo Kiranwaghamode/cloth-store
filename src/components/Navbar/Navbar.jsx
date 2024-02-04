@@ -27,7 +27,6 @@ export const Navbar = () => {
             <Link to='/category/1' className='items'>Men</Link>
             <Link to='/category/2' className='items'>Women</Link>
             <Link to='/category/3' className='items'>Children</Link>
-            <Link to='/category/4' className='items'>Accessories</Link>
         </div>
         <div className="center">
         <Link to='/' className='mainTitle'>

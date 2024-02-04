@@ -1,23 +1,55 @@
 
 import './List.css'
 import { Card } from '../card/Card'
-import useFetch from '../../hooks/useFetch'
+import { useEffect, useState } from 'react'
+import { productData } from '../../data/productData'
+import { WomenData } from '../../data/womenData'
+import { kidsData } from '../../data/kidsData'
 
 export const List = ({subcat, maxPrice, sort , catId}) => {
 
+  let categoryData = []
+  const [filteredData, setfilteredData] = useState([])
+
+  
 
 
-    const {data } = useFetch(`/products?populate=*&[filters][categories][id][$eq]=${catId}${subcat.map(
-      (item) => `&[filters][sub_categories][id][$eq]=${item}`
-      ).join("")}&[filters][price][$lte]=${maxPrice}&sort[0]=price:${sort}`)
+  useEffect(() => {
 
- 
+    if(catId === 1){
+      categoryData = productData
+    }else if(catId === 2){
+      categoryData = WomenData
+    }else if(catId === 3){
+      categoryData = kidsData
+    }
+
+
+
+    const filtered = categoryData.filter(product => product.price <= maxPrice);
+    
+
+    const sortedProducts = [...filtered].sort((a, b) => {
+      if (sort === 'asc') {
+        return a.price - b.price;
+      } else if (sort === 'desc') {
+        return b.price - a.price;
+      }
+      return 0; 
+    });
+
+    setfilteredData(sortedProducts);
+  }, [maxPrice , sort, catId]);
+
+
+
+  
   return (
 
      
     
     <div id='listContainer'>
-        {data.map((item)=>(
+        {filteredData?.map((item)=>(
             <Card item={item} key={item.id} />
         ))}
     </div>

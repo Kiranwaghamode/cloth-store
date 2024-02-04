@@ -7,10 +7,10 @@ export const Card = ({item}) => {
     <> 
         
         <div className="cardContainer">
-            <Link to={`/product/${item.id}`} className='cardLink' >
-            <img src={`http://localhost:1337${item.attributes.image.data.attributes.url}`} alt="" />
-            <h4>{item.attributes.title}</h4>
-            <p>Price: {item.attributes.price}</p>
+            <Link to={`/product/${item.catId}/${item.id}`} className='cardLink' >
+            <img src={item.imageUrl} alt="none" />
+            <h4>{item.name}</h4>
+            <p>Price: {item.price}</p>
             </Link>
         </div>
         

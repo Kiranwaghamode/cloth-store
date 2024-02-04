@@ -70,4 +70,21 @@
     #Productright{
         width: 40vw;
     }
+    .wishList{
+        width: 200px;
+        margin-right: 0;
+    }
+    .addToCart{
+        width: 170px;
+        margin-right: 0;
+        font-size: 15px;
+
+    }
+    .productMainDiv{
+        margin-right: 0;
+        padding: 0;
+    }
+    .Productright{
+        margin-right: 0;
+    }
 }
